@@ -1,0 +1,28 @@
+Welcome to your fbGallery Titanium Mobile Project
+
+This is a facboook app which will bring the photos from your fb page and display it in a nice way ..
+
+i saw it some where else, like it and decided to make a clone of it ..
+
+thanks
+
+things to change in tiapp.xml:
+    <property name="imagesURL" type="string">http://graph.facebook.com/facebook/photos?limit=</property>
+    <property name="facebookURL" type="string">https://www.facebook.com/facebook</property>
+    <property name="emailaddress" type="string">changeittoyouremail@gmail.com</property>
+    <property name="twitter" type="string">yourtwitterid</property>
+    <property name="google" type="string">yourgooogleplusurl</property>
+    <property name="facebookuser" type="string">yourfacebookappusername</property>
+    <property name="facebookappid" type="string">yourfacebookid</property>  
+
+----------------------------------
+Stuff our legal folk make us say:
+
+Appcelerator, Appcelerator Titanium and associated marks and logos are 
+trademarks of Appcelerator, Inc. 
+
+Titanium is Copyright (c) 2008-2012 by Appcelerator, Inc. All Rights Reserved.
+
+Titanium is licensed under the Apache Public License (Version 2). Please
+see the LICENSE file for the full license.
+

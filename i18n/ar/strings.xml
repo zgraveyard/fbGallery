@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+    <string name="app_name">fbGallery</string>    
+    <string name="app_about">عن البرنامج</string>
+    <string name="app_lastupdate">آخر تحديث بتاريخ</string>    
+    <string name="app_exit">انهاء</string>
+    <string name="app_refresh">تحديث المحتوى</string>
+    <string name="app_image_share">مشاركة</string>
+    <string name="app_image_share_via">مشاركة عن طريق</string>
+    <string name="app_feedback">ملاحظة على البرنامج</string>
+    <string name="app_mail_sent">تم ارسال الرسالة . شكراً</string>
+    <string name="app_loading">الرجاء الانتظار بينما يتم جلب المعلومات ...</string>
+    <string name="app_copyright">no copyright</string>
+    <string name="app_no_internet">هذا البرنامج بحاجة للاتصال بالانترنيت حتى يعمل!.</string> 
+    <string name="app_sharing_sentence">مرحباً ، لقد وجدت هذه الصورة التي اعجبت بها و وددت مشاركتها معك ، يمكنك مشاهدتها على الرابط :\n</string> 
+    <string name="app_internet_problem">حدثت مشكلة اثناء محاولة احضار البيانات ، هل من الممكن التأكد من الاتصال بالانترنيت \n </string>
+    <string name="sharing_done">تم مشاركة الصورة بنجاح .</string>
+    <string name="sharing_error">للأسف حدثت مشكلة اثناء المشاركة ..</string>
+    <string name="liking_done">شكراً ..</string>
+    <string name="app_facebook">فيسبوك</string>
+</resources>
