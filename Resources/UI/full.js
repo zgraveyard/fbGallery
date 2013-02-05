@@ -74,24 +74,14 @@ var rssHandler = function() {
 		backgroundSelectedColor : 'transparent',
 		touchEnabled : false,
 		borderColor : 'white',
-		borderWidth : 5
+		borderWidth : 0
 	});
-	
-	var buttonsContainer = Ti.UI.createTableViewRow({
-		width : Ti.UI.FILL,
-		height : '52',
-		backgroundSelectedColor : 'transparent',
-		touchEnabled : false,
-		borderColor : 'white',
-		borderWidth : 5
-	});	
 
 	for (var i = 0; i < images.length; i++) {
 
 		var currImage = images[i].images[7];
-		var cachedImage = require('/util/cachedImage');
-		
 		var bg = Ti.UI.createImageView({
+			image : currImage.source,
 			zIndex : 1,
 			touchEnabled : true,
 			top : 10,
@@ -103,15 +93,13 @@ var rssHandler = function() {
 			imageId : i,
 			type : 'image',
 		});
-		
-		cachedImage.cachedImageView('lens/dimashqi',currImage.source,bg);
-		
+
 		imageThumbs.add(bg);
 
 	}
 
+
 	data.push(imageThumbs);
-	data.push(buttonsContainer);
 
 	tblView.addEventListener('click', function(e) {
 		if (e.source.type === 'image') {
@@ -126,7 +114,6 @@ var rssHandler = function() {
 	Ti.App.fireEvent('hide_indicator');
 
 };
-
 var createSliders = function(images, imageId) {
 	Ti.App.fireEvent('show_indicator');
 	var views = [];
@@ -136,7 +123,7 @@ var createSliders = function(images, imageId) {
 		opacity : 0.9,
 		navBarHidden : true,
 		orientationModes : [Ti.UI.LANDSCAPE_LEFT, Ti.UI.LANDSCAPE_RIGHT],
-		windowSoftInputMode:Ti.UI.Android.SOFT_INPUT_ADJUST_UNSPECIFIED  //** important to make a heavyweight window
+		windowSoftInputMode:Ti.UI.Android.SOFT_INPUT_ADJUST_UNSPECIFIED
 		// orientationModes : [Ti.UI.LANDSCAPE_RIGHT]
 	});
 
@@ -164,17 +151,17 @@ var createSliders = function(images, imageId) {
 		}
 		
 		var image = Ti.UI.createImageView({
-			image : imgSource.source,			title : images[n].name,
+			image : imgSource.source,
+			title : images[n].name,
 			width : imgSource.width,
 			height : (imgSource.height > devHeight ) ? devHeight : imgSource.height,
 			touchEnabled : false,
-			// defaultImage : 'progressbar.gif',
 		});
 
-		// image.addEventListener('pinch', function(e) {
-			// var t = Ti.UI.create2DMatrix().scale(e.scale);
-			// e.source.transform = t;
-		// });
+		image.addEventListener('pinch', function(e) {
+			var t = Ti.UI.create2DMatrix().scale(e.scale);
+			e.source.transform = t;
+		});
 
 		var eventLabel = Ti.UI.createLabel({
 			html : images[n].name,
@@ -189,11 +176,11 @@ var createSliders = function(images, imageId) {
 		Titanium.Facebook.permissions = ['publish_stream'];
 
 		var share = Ti.UI.createButton({
-			backgroundImage : '/fb_share.png',
+			backgroundImage : 'fb_share.png',
 			height : '42',
 			width : '122',
 			top : 10,
-			left : -150,
+			left : -160,
 			link : images[n].link,
 			visible : false,
 		});
@@ -218,8 +205,8 @@ var createSliders = function(images, imageId) {
 		});
 
 		var labelContainer = Ti.UI.createView({
-			height : Ti.UI.SIZE,
-			bottom : -60,
+			height : 50,
+			bottom : -50,
 			backgroundColor : 'black',
 			opacity : 0.6,
 			width : Ti.UI.FILL,
@@ -231,6 +218,7 @@ var createSliders = function(images, imageId) {
 		imageContainer.add(labelContainer);
 		imageContainer.add(image);
 		imageContainer.add(share);
+
 		
 		imageContainer.addEventListener('click',function(e){
 			if(e.source.type === 'container')
@@ -272,10 +260,12 @@ var createSliders = function(images, imageId) {
 					lbAnimate.addEventListener('complete',function(){
 						childs[0].visible = false;
 					});
-				}	
+	
+				}				
 			}
 		});
 		
+
 		views.push(imageContainer);
 	}
 
@@ -294,11 +284,11 @@ var createSliders = function(images, imageId) {
 	sliderWin.add(slider);
 	slider.scrollToView(imageId);
 	slider.setVisible(true);
-	
+
 	//creating the menu
 	var activity = Ti.Android.currentActivity;
 	sliderWin.activity.onCreateOptionsMenu = require('menu').applicationMenu;
-	
+
 	sliderWin.addEventListener("android:back", function(e) {
 		sliderWin.remove(slider);
 		slider.setVisible(false);

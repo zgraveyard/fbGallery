@@ -7,14 +7,15 @@ i saw it some where else, like it and decided to make a clone of it ..
 thanks
 
 things to change in tiapp.xml:
-    <property name="imagesURL" type="string">http://graph.facebook.com/facebook/photos?limit=</property>
-    <property name="facebookURL" type="string">https://www.facebook.com/facebook</property>
-    <property name="emailaddress" type="string">changeittoyouremail@gmail.com</property>
-    <property name="twitter" type="string">yourtwitterid</property>
-    <property name="google" type="string">yourgooogleplusurl</property>
-    <property name="facebookuser" type="string">yourfacebookappusername</property>
-    <property name="facebookappid" type="string">yourfacebookid</property>  
-
+    <property name="imagesURL" type="string">http://graph.facebook.com/346749462084852/photos?limit=</property> #change it with your pageID
+    <property name="imagesLimit" type="string">20</property>
+    <property name="imagesTabletLimit" type="string">42</property>
+    <property name="facebookURL" type="string">https://www.facebook.com/lenshungryyoung</property>#change it with your page name
+    <property name="emailaddress" type="string">changeittoyouremail@gmail.com</property>#change it with your email
+    <property name="twitter" type="string">yourtwitterid</property>#change it with your twitter ID
+    <property name="google" type="string">yourgooogleplusurl</property>#change it with your google plus url
+    <property name="facebookuser" type="string">lenshungryyoung</property>#change it with your page user name
+    <property name="facebookappid" type="string">mustbeavalidappid</property> #change it with your app id, it must be a valid ID
 ----------------------------------
 Stuff our legal folk make us say:
 

@@ -17,15 +17,15 @@
     <analytics>true</analytics>
     <guid>5fe8aa8a-68f6-49e8-834d-325f5f42681b</guid>
     <property name="ti.ui.defaultunit" type="string">system</property>
-    <property name="imagesURL" type="string">http://graph.facebook.com/facebook/photos?limit=</property>
+    <property name="imagesURL" type="string">http://graph.facebook.com/346749462084852/photos?limit=</property>
     <property name="imagesLimit" type="string">20</property>
     <property name="imagesTabletLimit" type="string">42</property>
-    <property name="facebookURL" type="string">https://www.facebook.com/facebook</property>
+    <property name="facebookURL" type="string">https://www.facebook.com/lenshungryyoung</property>
     <property name="emailaddress" type="string">changeittoyouremail@gmail.com</property>
     <property name="twitter" type="string">yourtwitterid</property>
     <property name="google" type="string">yourgooogleplusurl</property>
-    <property name="facebookuser" type="string">yourfacebookappusername</property>
-    <property name="facebookappid" type="string">yourfacebookid</property>    
+    <property name="facebookuser" type="string">lenshungryyoung</property>
+    <property name="facebookappid" type="string">mustbeavalidappid</property>    
     <iphone>
         <orientations device="iphone">
             <orientation>Ti.UI.PORTRAIT</orientation>
